@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
+
 
 public class HW_Class {
 
@@ -57,4 +55,69 @@ if(iteration > 0){
 
 
 
-}
+    public static float getMax(float number , float number0 ){
+
+       if(number < number0){return number0;}
+
+       return number;
+
+    }
+
+    public static int getMax(int number , int number0 ){
+
+        if(number < number0){return number0;}
+
+        return number;
+
+    }
+    public static float getMax(float number , int number0 ){
+
+        if(number < number0){return number0;}
+
+        return number;
+
+    }
+    public static float getMax(int number , float number0 ){
+
+        if(number < number0){return number0;}
+
+        return number;
+
+    }
+
+
+
+
+    public static void riderNumberRecursion(int iteration, int Startnumber) {
+
+
+        if (iteration > 0 && Startnumber < iteration) {
+            Startnumber++;
+            System.out.println("number : " + Startnumber);
+            riderNumberRecursion(iteration, Startnumber);
+        } else {
+            if (iteration < 0 && Startnumber > iteration) {
+                Startnumber--;
+                System.out.println("Number : " + Startnumber);
+                riderNumberRecursion(iteration, Startnumber);
+            }
+
+        }}
+
+
+        public static void Draw_RectangleRecursion ( int x , int y){
+
+        if(y > -1){
+        String s = "";
+        for(int i = x ; i > 0 ; i--){
+            s += "+";
+
+        }
+        System.out.println(s);
+        Draw_RectangleRecursion(x , (y - 1));
+        }
+
+
+
+        }
+    }
