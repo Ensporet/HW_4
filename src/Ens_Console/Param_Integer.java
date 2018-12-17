@@ -2,7 +2,7 @@ package Ens_Console;
 
 import java.util.Scanner;
 
-public abstract class Param_Integer extends Param_input<Integer>{
+public abstract class Param_Integer extends Param_input<Integer> {
     public Param_Integer(Scanner sca) {
         super(sca);
     }
@@ -10,9 +10,13 @@ public abstract class Param_Integer extends Param_input<Integer>{
     @Override
     protected Integer isFormatTrue(String s) {
 
-        try{return Integer.valueOf(s);}catch (NumberFormatException e0){return null;}
-        catch (NullPointerException e1){return null;}
-
+        try {
+            return Integer.valueOf(s);
+        } catch (NumberFormatException e0) {
+            return null;
+        } catch (NullPointerException e1) {
+            return null;
+        }
 
 
     }
@@ -24,7 +28,7 @@ public abstract class Param_Integer extends Param_input<Integer>{
     }
 
     @Override
-    protected abstract String getSystemColTrue() ;
+    protected abstract String getSystemColTrue();
 
     @Override
     protected String getSystemColFalse() {
@@ -32,5 +36,5 @@ public abstract class Param_Integer extends Param_input<Integer>{
     }
 
     @Override
-    protected abstract String getSystemCol() ;
+    protected abstract String getSystemCol();
 }

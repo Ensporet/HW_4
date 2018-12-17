@@ -208,48 +208,49 @@ public class Main {
                 }
             }.Action();
 
-            if(i != null){HW_Class.riderNumberRecursion(i,0);}
-
+            if (i != null) {
+                HW_Class.riderNumberRecursion(i, 0);
+            }
 
 
         }
 
 
 //Tack 6---------------------------------------------------------------------------------------------------------------
-{
-    System.out.println("Tack 6");
-    new Param_ArrayInteger(scanner, 2) {
+        {
+            System.out.println("Tack 6");
+            new Param_ArrayInteger(scanner, 2) {
 
 
-        @Override
-        protected String getSystemColFalse() {
-            return super.getSystemColFalse() + "\n * Value mast to be > 0";
+                @Override
+                protected String getSystemColFalse() {
+                    return super.getSystemColFalse() + "\n * Value mast to be > 0";
+                }
+
+                @Override
+                public ArrayList<Integer> Action() {
+                    ArrayList<Integer> arr = super.Action();
+
+                    if (arr != null) {
+                        HW_Class.Draw_RectangleRecursion(arr.get(0), arr.get(1));
+                    }
+
+
+                    return arr;
+                }
+
+                @Override
+                protected String getSystemColTrue() {
+                    return "Draw a rectangle...";
+                }
+
+                @Override
+                protected String getSystemCol() {
+                    return "Enter two values Integer for the height and width of the rectangle. (number)(otherSymbol)(number) :";
+                }
+            }.Action();
+
+
         }
-
-        @Override
-        public ArrayList<Integer> Action() {
-            ArrayList<Integer> arr = super.Action();
-
-            if (arr != null) {
-                HW_Class.Draw_RectangleRecursion(arr.get(0),arr.get(1));
-            }
-
-
-            return arr;
-        }
-
-        @Override
-        protected String getSystemColTrue() {
-            return "Draw a rectangle...";
-        }
-
-        @Override
-        protected String getSystemCol() {
-            return "Enter two values Integer for the height and width of the rectangle. (number)(otherSymbol)(number) :";
-        }
-    }.Action();
-
-
-
+    }
 }
-}}
